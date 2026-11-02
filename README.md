@@ -17,4 +17,4 @@ Systems Engineering student in Graz, Austria, moving into **hardware and embedde
 ## Skills
 `KiCad` · `LTspice` · `C / C++` · `Python` · `I2C / SPI / UART` · `MQTT` · `SMD/THT soldering` · `Git`
 
-📫 [LinkedIn](https://www.linkedin.com/in/mkarajah)
+📫 [LinkedIn](https://www.linkedin.com/in/mkarajeh)
