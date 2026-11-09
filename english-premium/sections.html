@@ -1,0 +1,386 @@
+<!-- English page premium (draft 9 Nov 2026). Replaces everything in .mo-en-page AFTER </header id=moEnHeader> up to the main nav <script> (page 1269, widget 61365ea). Header, nav script, Winter-Pass place-counter script stay. Styles scoped .enp (same navy+gold as .hm/.kd/.lp/.gp). -->
+<style>
+.enp{--ink:#0B2236;--navy:#072A40;--gold:#C9A227;--gold-l:#E9D18A;--ivory:#FBF8F2;--line:#E7E1D3;--mut:#5A6B7A;--sea:#0E6F78;font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff}
+.enp *,.enp *::before,.enp *::after{box-sizing:border-box}
+.enp .w{max-width:1120px;margin:0 auto;padding:0 20px}
+.enp h1,.enp h2,.enp h3{letter-spacing:-.025em;margin:0;text-wrap:balance}
+.enp p{margin:0}
+.enp .eye{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.enp .sec{padding:80px 0}
+.enp .h2{font-size:clamp(1.75rem,3.4vw,2.5rem);font-weight:800;line-height:1.12;margin:12px 0 14px;color:var(--navy)}
+.enp .sub{font-size:1.05rem;line-height:1.65;color:var(--mut);max-width:640px}
+.enp .c{text-align:center}.enp .c .sub{margin:0 auto}
+.enp .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none!important;transition:transform .2s}
+.enp .btn:hover{transform:translateY(-2px)}
+.enp a:focus-visible{outline:3px solid var(--gold-l);outline-offset:3px}
+.enp .gold{background:linear-gradient(135deg,#E3C25E,#C9A227);color:#1B1606!important;box-shadow:0 10px 28px rgba(201,162,39,.35)}
+.enp .ghost{border:1px solid rgba(255,255,255,.35);color:#fff!important}
+/* Hero */
+.enp-hero{background:radial-gradient(900px 500px at 85% 0%,rgba(201,162,39,.16),transparent 60%),linear-gradient(160deg,#061E2F 0%,#0A3550 100%);color:#fff;padding:64px 0 80px}
+.enp-hero .g{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.enp-hero h1{color:#fff!important;font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:800;line-height:1.06;margin:16px 0 20px}
+.enp-hero h1 em{font-style:normal;background:linear-gradient(90deg,#F0D98C,#C9A227);-webkit-background-clip:text;background-clip:text;color:transparent}
+.enp-hero .lead{font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.82);max-width:540px;margin-bottom:28px}
+.enp-hero .ctas{display:flex;flex-wrap:wrap;gap:14px}
+.enp-hero .slot{margin-top:18px;display:inline-flex;align-items:center;gap:10px;font-size:.93rem;color:rgba(255,255,255,.85);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:10px 16px;border-radius:999px}
+.enp-hero .slot:empty{display:none}
+.enp-hero .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px 26px;margin:40px 0 0;padding:22px 0 0;border-top:1px solid rgba(255,255,255,.12);list-style:none}
+.enp-hero .facts b{display:block;font-size:1.2rem;color:var(--gold-l)}
+.enp-hero .facts span{font-size:.84rem;color:rgba(255,255,255,.7)}
+/* Chooser card */
+.enp-ch{background:linear-gradient(180deg,#FFFDF8,#F6F0E2);color:var(--ink);border-radius:26px;padding:24px;box-shadow:0 30px 70px rgba(0,0,0,.35);border:1px solid rgba(201,162,39,.4)}
+.enp-ch h2{font-size:1.2rem;color:var(--navy);margin-bottom:4px}
+.enp-ch>p{font-size:.88rem;color:var(--mut);margin-bottom:14px}
+.enp-ch a{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 16px;margin-top:10px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.enp-ch a:hover{border-color:var(--gold);transform:translateX(3px)}
+.enp-ch a b{color:var(--navy);font-size:1rem}
+.enp-ch a small{grid-column:1;font-size:.82rem;color:var(--mut)}
+.enp-ch a span{grid-row:1/3;grid-column:2;font-weight:800;color:var(--sea);white-space:nowrap}
+.enp-ch .cap{margin-top:14px;font-size:.8rem;color:#7C7461;text-align:center;line-height:1.5}
+/* Steps */
+.enp-how{background:var(--ivory)}
+.enp-how ol{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.enp-how li{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;counter-increment:s}
+.enp-how li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold-l);font-weight:800;margin-bottom:14px}
+.enp-how h3{font-size:1.12rem;color:var(--navy);margin-bottom:8px}
+.enp-how p{font-size:.94rem;line-height:1.6;color:var(--mut)}
+/* Prices */
+.enp-pr .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.enp-pr .o{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;padding:22px;background:#fff}
+.enp-pr .o.feat{border:2px solid var(--gold);background:linear-gradient(180deg,#FFFDF6,#fff)}
+.enp-pr .tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+.enp-pr .o.feat .tag{color:#9A7A10}
+.enp-pr h3{font-size:1.2rem;margin:8px 0;color:var(--navy)}
+.enp-pr .o>p{font-size:.9rem;line-height:1.55;color:var(--mut)}
+.enp-pr dl{margin:14px 0 16px;flex:1}
+.enp-pr dl div{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.88rem}
+.enp-pr dt{color:var(--mut)}.enp-pr dd{margin:0;font-weight:800;color:var(--navy);white-space:nowrap}
+.enp-pr .o>a{display:block;text-align:center;padding:12px;border-radius:999px;border:1px solid var(--navy);color:var(--navy);font-weight:700;text-decoration:none}
+.enp-pr .o.feat>a{border:0;background:linear-gradient(135deg,#E3C25E,#C9A227);color:#1B1606}
+.enp-pr .mini{margin-top:10px;font-size:.8rem;color:var(--mut);line-height:1.45}.enp-pr .mini a{color:var(--sea);font-weight:700}
+.enp-pr .win{margin-top:20px;display:grid;grid-template-columns:1.2fr 1fr auto;gap:22px;align-items:center;border-radius:22px;padding:24px 26px;background:linear-gradient(135deg,#0A3550,#0E4E6B);color:#fff}
+.enp-pr .win small{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-l)}
+.enp-pr .win h3{color:#fff;margin:6px 0}.enp-pr .win p{font-size:.9rem;line-height:1.55;color:rgba(255,255,255,.78)}
+.enp-pr .win dl{margin:0}.enp-pr .win dl div{border-color:rgba(255,255,255,.18)}.enp-pr .win dt{color:rgba(255,255,255,.7)}.enp-pr .win dd{color:var(--gold-l)}
+.enp-pr .win a{padding:12px 20px;border-radius:999px;background:#fff;color:var(--navy)!important;font-weight:700;text-decoration:none;white-space:nowrap}
+.enp-pr .note{margin-top:20px;text-align:center;font-size:.9rem;color:var(--mut);line-height:1.6}
+/* Mo + why */
+.enp-mo{background:var(--ivory)}
+.enp-mo .g{display:grid;grid-template-columns:.75fr 1.25fr;gap:52px;align-items:center}
+.enp-mo img{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:26px;border:6px solid #fff;box-shadow:0 20px 50px rgba(7,42,64,.18);display:block;margin:0 auto}
+.enp-mo ul{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.enp-mo li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.92rem;line-height:1.45;color:var(--mut)}
+.enp-mo li b{display:block;color:var(--navy)}
+/* Reviews */
+.enp-rev .head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.enp-rev .score{display:flex;align-items:center;gap:12px;background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:12px 18px;font-size:.9rem;color:var(--mut)}
+.enp-rev .score b{font-size:1.6rem;color:var(--navy)}.enp-rev .stars{color:#E2A400;letter-spacing:2px}
+.enp-rev .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.enp-rev figure{margin:0;border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}
+.enp-rev figure p{font-size:.97rem;line-height:1.6}
+.enp-rev figcaption{margin-top:14px;font-size:.85rem;color:var(--mut)}.enp-rev figcaption b{color:var(--navy)}
+/* Booking */
+.enp-book{background:linear-gradient(180deg,#F2F7F8,#fff)}
+.enp-book .wrapbk{max-width:760px;margin:32px auto 0}
+.enp-book .bk-note{margin-top:14px;text-align:center;font-size:.88rem;color:var(--mut)}
+/* FAQ */
+.enp-faq .list{max-width:780px;margin:32px auto 0}
+.enp-faq details{border:1px solid var(--line);border-radius:16px;margin-bottom:10px;background:#fff}
+.enp-faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-weight:700;color:var(--navy);position:relative}
+.enp-faq summary::-webkit-details-marker{display:none}
+.enp-faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.3rem;color:var(--gold)}
+.enp-faq details[open] summary::after{content:"–"}
+.enp-faq details p{padding:0 20px 18px;line-height:1.65;color:var(--mut);font-size:.95rem}
+.enp-faq details a{color:var(--sea);font-weight:600}
+/* Gratkorn + end */
+.enp-gk{padding:0 0 72px}
+.enp-gk .box{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-radius:20px;padding:20px 26px;background:#F2F8F8;border:1px solid #CFE4E5;font-size:.95rem;color:var(--mut);line-height:1.55}
+.enp-gk b{color:var(--navy)}.enp-gk a{color:var(--sea);font-weight:700;white-space:nowrap}
+.enp-end{background:radial-gradient(800px 400px at 50% 0%,rgba(201,162,39,.18),transparent 60%),linear-gradient(160deg,#061E2F,#0A3550);color:#fff;text-align:center}
+.enp-end .h2{color:#fff}.enp-end .sub{color:rgba(255,255,255,.78);margin:0 auto 28px}
+.enp-end .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.enp-end .small{margin-top:22px;font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.7}.enp-end .small a{color:var(--gold-l)}
+@media(max-width:1000px){
+ .enp-hero .g,.enp-mo .g{grid-template-columns:1fr;gap:36px}
+ .enp-pr .grid{grid-template-columns:1fr 1fr}
+ .enp-pr .win{grid-template-columns:1fr}
+ .enp-rev .grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+ .enp .sec{padding:60px 0}
+ .enp-hero{padding:36px 0 56px}
+ .enp-hero .facts{grid-template-columns:1fr 1fr}
+ .enp-hero .ctas{display:none}
+ .enp-hero .lead{font-size:1rem;margin-bottom:22px}
+ .enp-hero h1{font-size:2rem}
+ .enp-hero .eye{font-size:.66rem;letter-spacing:.12em}
+ .enp-ch{padding:20px}
+ .enp-how ol,.enp-pr .grid,.enp-mo ul{grid-template-columns:1fr}
+ .enp-how ol{gap:10px;margin-top:28px}.enp-how li{display:grid;grid-template-columns:40px 1fr;gap:4px 14px;padding:16px}.enp-how li::before{grid-row:1/3;margin:0}
+ .enp-mo img{max-width:220px}.enp-mo li{padding:12px 14px}
+}
+.enp-bar{display:none}
+@media(max-width:760px){.enp-bar{position:fixed;left:0;right:0;bottom:0;z-index:9991;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(6,30,47,.96);box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .25s}
+ .enp-bar.on{transform:none}
+ .enp-bar a{flex:1;text-align:center;padding:13px 10px;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none!important}
+ .enp-bar .p{background:linear-gradient(135deg,#E3C25E,#C9A227);color:#1B1606!important}
+ .enp-bar .wa{flex:0 0 52px;display:grid;place-items:center;padding:0;background:#25D366;color:#06361B!important}
+ .enp .enp-end{padding-bottom:110px}}
+/* this page only: hide app pill/band (overlaps hero; most visitors are new) */
+.mo-apppill,#mo-app{display:none!important}
+@media(prefers-reduced-motion:reduce){.enp *,.enp-bar{transition:none!important}}
+/* English page extras */
+.enp-hero .slot{background:none;border:0;padding:0}
+
+.enp-why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.enp-why .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 22px}
+.enp-why .card i{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--navy);color:var(--gold-l);font-style:normal;font-weight:800;margin-bottom:14px}
+.enp-why h3{font-size:1.08rem;color:var(--navy);margin-bottom:8px}
+.enp-why p{font-size:.93rem;line-height:1.6;color:var(--mut)}
+.enp-who .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.enp-who .card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;padding:26px 24px;background:#fff}
+.enp-who .tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+.enp-who h3{font-size:1.25rem;color:var(--navy);margin:8px 0 10px}
+.enp-who .card>p{font-size:.93rem;line-height:1.6;color:var(--mut)}
+.enp-who ul{list-style:none;padding:0;margin:14px 0 18px;flex:1}
+.enp-who li{position:relative;padding:6px 0 6px 24px;font-size:.92rem;color:var(--ink);line-height:1.45}
+.enp-who li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--gold);font-weight:800}
+.enp-who .card>a{display:block;text-align:center;padding:12px;border-radius:999px;border:1px solid var(--navy);color:var(--navy);font-weight:700;text-decoration:none}
+.enp-path{background:var(--ivory)}
+.enp-path .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+.enp-path h3.col{font-size:1.15rem;color:var(--navy);margin-bottom:12px}
+.enp-path details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+.enp-path summary{cursor:pointer;list-style:none;padding:16px 48px 16px 18px;position:relative}
+.enp-path summary::-webkit-details-marker{display:none}
+.enp-path summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:1.3rem;color:var(--gold)}
+.enp-path details[open] summary::after{content:"–"}
+.enp-path summary b{display:block;color:var(--navy)}
+.enp-path summary small{font-size:.84rem;color:var(--mut)}
+.enp-path ol{margin:0;padding:0 18px 16px 38px;font-size:.9rem;line-height:1.55;color:var(--mut)}
+.enp-path ol li{padding:3px 0}.enp-path ol b{color:var(--ink)}
+.enp-path .note{margin-top:22px;font-size:.88rem;line-height:1.6;color:var(--mut);text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+.enp-extra .g{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.enp-extra .box{border-radius:22px;padding:26px;border:1px solid var(--line);background:#fff}
+.enp-extra .box.dark{background:linear-gradient(135deg,#0A3550,#0E4E6B);color:#fff;border:0}
+.enp-extra small{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+.enp-extra .dark small{color:var(--gold-l)}
+.enp-extra h3{font-size:1.2rem;color:var(--navy);margin:8px 0}.enp-extra .dark h3{color:#fff}
+.enp-extra p{font-size:.93rem;line-height:1.6;color:var(--mut)}.enp-extra .dark p{color:rgba(255,255,255,.8)}
+.enp-extra a{display:inline-block;margin-top:14px;font-weight:700;color:var(--sea);text-decoration:none}.enp-extra .dark a{color:var(--gold-l)}
+.enp-rev .en{display:block;margin-top:8px;font-size:.85rem;color:var(--mut);font-style:italic}
+.enp-pr .win [data-wp-places]{display:inline-block;margin-top:8px;font-size:.82rem;color:var(--gold-l);font-weight:700}
+@media(max-width:1000px){.enp-why .grid{grid-template-columns:1fr 1fr}.enp-who .grid,.enp-path .cols,.enp-extra .g{grid-template-columns:1fr}}
+@media(max-width:640px){.enp-why .grid{grid-template-columns:1fr;gap:10px;margin-top:28px}.enp-why .card{display:grid;grid-template-columns:44px 1fr;gap:2px 14px;padding:16px}.enp-why .card i{grid-row:1/3;margin:0}.enp-who .grid{margin-top:28px}}
+</style>
+<div class="enp">
+
+<section class="enp-hero" id="start"><div class="w g">
+ <div>
+  <span class="eye">Private swimming lessons in English · Bad zur Sonne, Graz</span>
+  <h1>English swimming lessons in Graz – <em>private for kids from 3 and adults</em></h1>
+  <p class="lead">Just your child (or you) and Coach Mo in warm water – 1:1 or in pairs, the whole lesson in English. Calm, no group pressure and visible progress after every session. Also for a fear of water.</p>
+  <div class="ctas">
+   <a class="btn gold" href="#courses" data-cta="en_hero_prices">See courses &amp; prices ↓</a>
+   <a class="btn ghost" href="#booking" data-cta="en_hero_slot">Find a free time</a>
+  </div>
+  <div class="slot" data-smo-slot="flex" data-smo-lang="en"></div>
+ </div>
+ <div class="enp-ch">
+  <h2>Start with a trial lesson</h2>
+  <p>Choose who is swimming – you see the free times right away.</p>
+  <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=28" data-cta="en_trial_kid30"><b>Child under 7</b><small>30 minutes · 1:1</small><span>€35 →</span></a>
+  <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=29" data-cta="en_trial_kid45"><b>Child aged 7+</b><small>45 minutes · 1:1</small><span>€50 →</span></a>
+  <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=29" data-cta="en_trial_adult"><b>Adult</b><small>45 minutes · 1:1</small><span>€50 →</span></a>
+  <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=30" data-cta="en_trial_pair"><b>Two together</b><small>45 minutes · siblings, couples, friends</small><span>€60 →</span></a>
+  <p class="cap">Once per family. Credited to a package if you book within 30 days. Pool entry not included.</p>
+ </div>
+</div>
+<div class="w">
+  <ul class="facts">
+   <li><b>★ 4.9</b><span>36 Google reviews</span></li>
+   <li><b>500+</b><span>families &amp; adults</span></li>
+   <li><b>max. 2</b><span>people in the water</span></li>
+   <li><b>Tue · Sat · Sun</b><span>choose your own times</span></li>
+  </ul>
+</div></section>
+
+<section class="enp-why sec"><div class="w">
+ <div class="c"><span class="eye">Why families in Graz choose Mo</span><h2 class="h2">A premium lesson – every minute is yours</h2><p class="sub">No waiting at the edge, no language barrier, no stress. Everything is built so you or your child feel safe from the first minute.</p></div>
+ <div class="grid">
+  <div class="card"><i>EN</i><h3>Taught in English</h3><p>Instructions, feedback and your questions – all in English. Ideal for international families and newcomers to Graz.</p></div>
+  <div class="card"><i>1:1</i><h3>Strictly private</h3><p>1 or 2 people instead of about 8 per teacher in a group course. That is why progress usually comes faster.</p></div>
+  <div class="card"><i>☀</i><h3>Warm water</h3><p>Bad zur Sonne has pleasantly warm water – no shivering, full focus, even for small children.</p></div>
+  <div class="card"><i>✓</i><h3>Progress you can see</h3><p>After each lesson you see in the app what is done and what comes next. Kids collect stickers on their journey.</p></div>
+ </div>
+</div></section>
+
+<section class="enp-how sec" id="how"><div class="w">
+ <div class="c"><span class="eye">How it works</span><h2 class="h2">Into the water in 3 steps</h2><p class="sub">No phone call, no waiting list. Everything online in English – in a few minutes.</p></div>
+ <ol>
+  <li><h3>Book a trial lesson</h3><p>Pick a Tuesday, Saturday or Sunday time and pay online (card, EPS, Apple Pay, Google Pay). Your confirmation comes by email right away.</p></li>
+  <li><h3>Meet Mo in the water</h3><p>Mo sees where your child (or you) stands, takes fears seriously and sets the first goal with you.</p></li>
+  <li><h3>Continue with the right package</h3><p>Flex Pass, Intensive Week or Sunday Training – Mo recommends what fits. The trial is credited within 30 days.</p></li>
+ </ol>
+</div></section>
+
+<section class="enp-who sec"><div class="w">
+ <div class="c"><span class="eye">Who it's for</span><h2 class="h2">Lessons for every age</h2><p class="sub">Whether it is your child's very first splash or your own fresh start – Mo meets you exactly where you are.</p></div>
+ <div class="grid">
+  <div class="card" id="kids"><span class="tag">Ages 3–6 · 30 min</span><h3>Little explorers</h3><p>Playful water familiarisation and first strokes. 30 minutes match the attention span of small children – no getting cold, no exhaustion.</p>
+   <ul><li>Build water confidence step by step</li><li>Dive under without fear</li><li>Water safety &amp; climbing out alone</li></ul>
+   <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=28" data-cta="en_who_kid30">Trial lesson €35</a></div>
+  <div class="card"><span class="tag">Ages 7–14 · 45 min</span><h3>Brave water heroes</h3><p>From age 7 children stay focused longer. 45 minutes give time for clean technique and real endurance.</p>
+   <ul><li>25 m without stopping</li><li>Front crawl, breaststroke &amp; backstroke</li><li>Self-rescue in deep water</li></ul>
+   <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=29" data-cta="en_who_kid45">Trial lesson €50</a></div>
+  <div class="card" id="adults"><span class="tag">Adults · 45 min</span><h3>Fear-free adults</h3><p>It is never too late. Discreet, patient and fully at your own pace – alone or as a pair.</p>
+   <ul><li>Overcome a fear of water for good</li><li>Learn to swim from scratch</li><li>Master front crawl &amp; breathing</li></ul>
+   <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=29" data-cta="en_who_adult">Trial lesson €50</a></div>
+ </div>
+</div></section>
+
+<section class="enp-pr sec" id="courses"><div class="w">
+ <div class="c"><span class="eye">Courses &amp; prices</span><h2 class="h2">All offers at a glance</h2><p class="sub">30 minutes for children under 7, 45 minutes from age 7 and for adults. In pairs: same swimming level – age does not matter.</p></div>
+ <div class="grid">
+  <div class="o feat">
+   <span class="tag">The best start</span><h3>Trial lesson</h3>
+   <p>One session to get to know each other. Once per family.</p>
+   <dl><div><dt>Child · 30 min</dt><dd>€35</dd></div><div><dt>7+ / adult · 45 min</dt><dd>€50</dd></div><div><dt>Two people · 45 min</dt><dd>€60</dd></div></dl>
+   <a href="/buchen/?lang=en&amp;kurs=flex&amp;paket=28" data-cta="en_pr_trial">Book a trial lesson</a>
+   <p class="mini">Credited to a package if you book within 30 days.</p>
+  </div>
+  <div class="o" id="flex">
+   <span class="tag">Most flexible</span><h3>Flex Pass</h3>
+   <p>3 or 5 sessions. Book your own times (Tue/Sat/Sun) in the app, move them free of charge up to 24 h before.</p>
+   <dl><div><dt>Child · 3 / 5 × 30 min</dt><dd>€120 / 185</dd></div><div><dt>1 person · 3 / 5 × 45 min</dt><dd>€180 / 285</dd></div><div><dt>Two · 3 / 5 × 45 min</dt><dd>€210 / 335</dd></div></dl>
+   <a href="/buchen/?lang=en&amp;kurs=flex" data-cta="en_pr_flex">Choose a Flex Pass</a>
+   <p class="mini">Sessions are active for 3 months, then paused – reactivated on request.</p>
+  </div>
+  <div class="o" id="intensive">
+   <span class="tag">Fastest progress</span><h3>Intensive Week</h3>
+   <p>5 days in a row in the school holidays: 2–6 Jan, 15–19 Feb, 22–26 Mar 2027.</p>
+   <dl><div><dt>Child · 5 × 30 min</dt><dd>€175</dd></div><div><dt>1 person · 5 × 45 min</dt><dd>€250</dd></div><div><dt>Two · 5 × 45 min</dt><dd>€300</dd></div></dl>
+   <a href="/buchen/?lang=en&amp;kurs=intensiv" data-cta="en_pr_intensive">Choose a week</a>
+   <p class="mini">New for 2–6 Jan: shared course with a partner on the same level, 5 × 45 min for €150 (kids 5+ &amp; adults). <a href="/buchen/?lang=en&amp;kurs=intensiv&amp;paket=44" data-cta="en_pr_share">View</a></p>
+  </div>
+  <div class="o" id="sunday">
+   <span class="tag">Next to school &amp; work</span><h3>Sunday Training</h3>
+   <p>4 Sundays, always at the same time. Fixed place, fixed rhythm. Next starts: 15 Nov 2026 · 10 Jan 2027.</p>
+   <dl><div><dt>Child · 4 × 30 min</dt><dd>€140</dd></div><div><dt>1 person · 4 × 45 min</dt><dd>€200</dd></div><div><dt>Two · 4 × 45 min</dt><dd>€240</dd></div></dl>
+   <a href="/buchen/?lang=en&amp;kurs=sonntag" data-cta="en_pr_sunday">Choose Sundays</a>
+   <p class="mini">Optional illness cover: €15 (30 min) / €25 (45 min).</p>
+  </div>
+ </div>
+ <div class="win" id="winter-pass">
+  <div><small>Kids 3–14 only · only 8 places</small><h3>Winter Pass: 10 sessions until 31 March</h3><p>December to March. Book your own times (Tue/Sat/Sun) and move them up to 24 h before. Medals &amp; certificate included. Unused sessions expire on 31 March 2027.</p><span data-wp-places="en"></span></div>
+  <dl><div><dt>10 × 30 min</dt><dd>€340</dd></div><div><dt>10 × 45 min</dt><dd>€510</dd></div><div><dt>10 × 45 min for two</dt><dd>€590</dd></div></dl>
+  <a href="/buchen/?lang=en&amp;kurs=winter" data-cta="en_pr_winter">Get the Winter Pass</a>
+ </div>
+ <p class="note">All prices incl. VAT, plus pool entry paid at the Bad zur Sonne till.</p>
+</div></section>
+
+<section class="enp-path sec" id="curriculum"><div class="w">
+ <div class="c"><span class="eye">Your learning path</span><h2 class="h2">You always know the next step</h2><p class="sub">Built by Coach Mo. A step is done when you or your child can do it confidently – not after a fixed number of hours.</p></div>
+ <div class="cols">
+  <div>
+   <h3 class="col">For kids: 3 stages, 18 stickers</h3>
+   <details><summary><b>Star Stage: Courage Explorer</b><small>usually ages 3–5 · trust and safety basics</small></summary><ol>
+    <li><b>Water Friend</b> – face in the water, blowing bubbles</li><li><b>Pool Edge Climber</b> – holding the edge and moving along it</li><li><b>Diver Eyes</b> – head under, eyes open</li><li><b>Starfish Float</b> – floating on front and back, gliding</li><li><b>Jump Hero</b> – jumping in and back to the edge</li><li><b>Exit Pro</b> – climbing out without a ladder</li></ol></details>
+   <details><summary><b>Penguin Stage: Water Hero</b><small>usually from age 5–6 · goal 25 m</small></summary><ol>
+    <li><b>Backstroke Pro</b> – resting and swimming on the back</li><li><b>Self-Rescuer</b> – falling into deep water, resting, back to the edge</li><li><b>Ring Diver</b> – fetching a dive ring from the bottom</li><li><b>Flutter Kick</b> – gliding and 10 m crawl kick</li><li><b>Breaststroke Kick</b> – a clean frog kick</li><li><b>Breath Rhythm</b> – breathing out into the water regularly</li><li><b>25m Hero</b> – 25 m without stopping or aids</li></ol></details>
+   <details><summary><b>Shark Stage: Master of the Seas</b><small>after the Penguin Stage · technique &amp; endurance</small></summary><ol>
+    <li><b>Side Breathing</b> – front crawl breathing to the side</li><li><b>Headfirst Dive</b> – from the pool edge into deep water</li><li><b>Long Distance</b> – 200 m in max. 15 minutes</li><li><b>Deep Diver</b> – diving to the bottom in 2 m deep water</li><li><b>Individual Medley</b> – back, breast, crawl and dolphin kick</li></ol></details>
+  </div>
+  <div id="lernpfade">
+   <h3 class="col">For adults: 3 paths, 6 steps each</h3>
+   <details><summary><b>1. Calm &amp; confident in the water</b><small>you feel uneasy in deep water or avoid it</small></summary><ol>
+    <li>I can enter the pool and stand calmly in chest-deep water.</li><li>I can breathe out calmly with my face in the water.</li><li>I can stand up on my own from front and back position.</li><li>I can float on my front and back and glide a short way.</li><li>I can swim a short distance with regular strokes.</li><li>I can float or tread water in deep water and get out on my own.</li></ol></details>
+   <details><summary><b>2. Learn front crawl</b><small>you swim breaststroke and want to learn crawl</small></summary><ol>
+    <li>I can glide stretched out and relaxed.</li><li>I can kick a steady crawl kick from the hips.</li><li>I can turn my head to breathe without lifting it.</li><li>I can lead the crawl arm with a high elbow.</li><li>I can link arms and legs into a continuous stroke.</li><li>I can swim a longer distance of crawl with regular breathing.</li></ol></details>
+   <details><summary><b>3. Swim better &amp; longer</b><small>you already swim and want to get better or fitter</small></summary><ol>
+    <li>Together we look at technique, endurance and breathing and set your goal.</li><li>I can deliberately correct a chosen technique fault.</li><li>I can swim a length with fewer strokes.</li><li>I can swim longer distances with steady technique.</li><li>I can hold a relaxed breathing rhythm over the distance.</li><li>I can train independently with my own plan.</li></ol></details>
+  </div>
+ </div>
+ <p class="note">We check the starting point in the first lesson; if you already have some skills, you start further along. This is not medical treatment: with a strong fear of water, please also talk to your doctor or a psychologist.</p>
+</div></section>
+
+<section class="enp-mo sec" id="mo"><div class="w g">
+ <img src="/wp-content/uploads/2026/11/coach-mo-portrait.avif" alt="Coach Mo, swimming teacher in Graz" width="320" height="400" loading="lazy">
+ <div>
+  <span class="eye">Your swimming teacher</span>
+  <h2 class="h2">Coach Mo – Mohanad Al-Karajeh, BSc</h2>
+  <p class="sub">I teach privately because every child and every adult learns differently. In my lessons nobody waits at the edge – every minute belongs to you.</p>
+  <ul>
+   <li><b>1 or 2 instead of about 8</b>people per teacher – that is why it usually goes faster.</li>
+   <li><b>Progress in the app</b>After every lesson you see what is done and what comes next.</li>
+   <li><b>Also with a fear of water</b>Your child (or you) sets the pace. No pressure.</li>
+   <li><b>Autism Swim certified</b>Calm 1:1 lessons for children with autism or ADHD.</li>
+  </ul>
+ </div>
+</div></section>
+
+<section class="enp-extra sec" style="padding-top:0"><div class="w g">
+ <div class="box"><small>Every child is welcome</small><h3>Low-stimulus lessons for autism &amp; ADHD</h3><p>A calm atmosphere, clear routines, visual aids and plenty of patience – so your child feels safe and understood. Always 1:1.</p><a href="https://wa.me/436705060018" data-cta="en_inclusion_whatsapp">Ask Mo personally →</a></div>
+ <div class="box dark"><small>Optional add-on · €69 per 5-session course</small><h3>My Underwater Adventure in 4K</h3><p>Premium underwater videos of the big moments – from the first dive to the first strokes alone. A lasting memory for the whole family.</p><a href="https://wa.me/436705060018" data-cta="en_4k_request">Request the upgrade →</a></div>
+</div></section>
+
+<section class="enp-rev sec" id="reviews"><div class="w">
+ <div class="head">
+  <div><span class="eye">Google reviews</span><h2 class="h2">What families in Graz say</h2></div>
+  <div class="score"><b>4.9</b><div><span class="stars">★★★★★</span><br>36 reviews on Google</div></div>
+ </div>
+ <div class="grid">
+  <figure><span class="stars">★★★★★</span><p>“Coach Mo is incredibly kind, patient, and highly skilled at teaching kids. My child absolutely loved every single class and looked forward to them every day.”</p><figcaption><b>Jinwon L.</b> · Google</figcaption></figure>
+  <figure><span class="stars">★★★★★</span><p>“A really kind swimming teacher – my child was a complete beginner and managed to swim a short distance alone within 5 days. The next course is already booked!”<span class="en">Translated from German</span></p><figcaption><b>Sabrina H.</b> · Google</figcaption></figure>
+  <figure><span class="stars">★★★★★</span><p>“Mo guided our kids wonderfully! From the very first moment we felt completely safe and comfortable.”<span class="en">Translated from German</span></p><figcaption><b>Bianca E.</b> · Google</figcaption></figure>
+ </div>
+</div></section>
+
+<section class="enp-book sec" id="booking"><div class="w">
+ <div class="c"><span class="eye">Booking</span><h2 class="h2">Secure your place</h2><p class="sub">Choose a course, choose a time, pay online – done.</p></div>
+ <div class="wrapbk">
+  <div class="smo-bk" data-smo-bk="{&quot;api&quot;:&quot;https://schwimmschulemo.at/wp-json/smo-booking/v1&quot;,&quot;course&quot;:&quot;&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;phase&quot;:2}"></div>
+  <p class="bk-note">Questions first? <a href="https://wa.me/436705060018" data-cta="en_book_whatsapp">Message Mo on WhatsApp</a>.</p>
+ </div>
+</div></section>
+
+<section class="enp-faq sec" id="faq"><div class="w">
+ <div class="c"><span class="eye">FAQ</span><h2 class="h2">Good to know</h2></div>
+ <div class="list">
+  <details><summary>Is the whole lesson really in English?</summary><p>Yes. Mo teaches the full lesson in English – instructions, feedback and your questions. The booking page is in English too.</p></details>
+  <details><summary>From what age can my child join?</summary><p>Children can start from age 3. Adults of every age are welcome too – whether you want to overcome a fear of water, learn front crawl or improve your technique.</p></details>
+  <details><summary>Why 30 or 45 minutes?</summary><p>30 minutes match the focus and strength of children aged 3 to 6 – without getting cold or exhausted. From age 7 and for adults, 45 minutes are ideal to build technique and endurance.</p></details>
+  <details><summary>Can two people swim together?</summary><p>Yes, in the 45-minute sessions – for siblings, couples or friends. They need the same swimming level; age does not matter, so nobody is bored or overwhelmed.</p></details>
+  <details><summary>Is pool entry included?</summary><p>No. You pay the entry to Bad zur Sonne directly at the till.</p></details>
+  <details><summary>What if we are ill?</summary><p>With the Flex Pass and the Winter Pass you move sessions yourself in the app up to 24 hours before. Sunday and Intensive courses have fixed dates – missed sessions cannot be made up or refunded. With the optional illness cover (€15 for 30 min, €25 for 45 min) you can make up one session missed because of illness, with a doctor's note.</p></details>
+  <details><summary>Where do the lessons take place?</summary><p>At Bad zur Sonne, Feuerbachgasse 11-13, 8020 Graz – in pleasantly warm water. New from February 2027 also in Gratkorn.</p></details>
+ </div>
+</div></section>
+
+<section class="enp-gk"><div class="w"><div class="box">
+ <p><b>New from February 2027 at Hallenbad Gratkorn:</b> holiday group courses for kids, adult courses on Thursdays and private lessons – pool entry included.</p>
+ <a href="/swimming-lessons-gratkorn/" data-cta="en_gratkorn">Courses in Gratkorn →</a>
+</div></div></section>
+
+<section class="enp-end sec" id="contact"><div class="w">
+ <h2 class="h2">Ready for the first lesson?</h2>
+ <p class="sub">Maximum 2 people per session – the places on Tuesday, Saturday and Sunday are limited.</p>
+ <div class="ctas">
+  <a class="btn gold" href="#start" data-cta="en_end_trial">Trial lesson from €35</a>
+  <a class="btn ghost" href="https://wa.me/436705060018" data-cta="en_end_whatsapp">WhatsApp: +43 670 506 00 18</a>
+ </div>
+ <p class="small">Bad zur Sonne, Feuerbachgasse 11-13, 8020 Graz · <a href="mailto:info@schwimmschulemo.at">info@schwimmschulemo.at</a></p>
+</div></section>
+
+</div>
+
+<div class="enp-bar" id="enpBar"><a class="p" href="#start" data-cta="en_bar_trial">Trial lesson from €35</a><a class="wa" href="https://wa.me/436705060018" data-cta="en_bar_whatsapp" aria-label="WhatsApp Mo"><svg width="24" height="24" viewBox="0 0 24 24" fill="#06361B" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6 6 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c.7.3 1.3.5 1.8.6a4.3 4.3 0 0 0 2 .1 3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0z"/></svg></a></div>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the whole lesson in English?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Coach Mo teaches the full lesson in English – instructions, feedback and your questions."}}, {"@type": "Question", "name": "From what age can my child join?", "acceptedAnswer": {"@type": "Answer", "text": "Children can start from age 3. Adults of every age are welcome too."}}, {"@type": "Question", "name": "Why 30 or 45 minutes?", "acceptedAnswer": {"@type": "Answer", "text": "30 minutes match children aged 3 to 6. From age 7 and for adults, 45 minutes are ideal."}}, {"@type": "Question", "name": "Can two people swim together?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in the 45-minute sessions for siblings, couples or friends with the same swimming level."}}, {"@type": "Question", "name": "Is pool entry included?", "acceptedAnswer": {"@type": "Answer", "text": "No. You pay the entry to Bad zur Sonne directly at the till."}}, {"@type": "Question", "name": "What if we are ill?", "acceptedAnswer": {"@type": "Answer", "text": "With the Flex Pass and the Winter Pass you move sessions yourself up to 24 hours before. For fixed courses there is an optional illness cover (€15 or €25)."}}, {"@type": "Question", "name": "Where do the lessons take place?", "acceptedAnswer": {"@type": "Answer", "text": "At Bad zur Sonne, Feuerbachgasse 11-13, 8020 Graz."}}]}</script>
+<script>
+/* sticky bar only after the hero */
+(function(){var b=document.getElementById('enpBar'),h=document.getElementById('start');if(!b||!h||!('IntersectionObserver'in window)){if(b)b.classList.add('on');return}
+new IntersectionObserver(function(e){b.classList.toggle('on',!e[0].isIntersecting)}).observe(h)})();
+/* GA4/Meta: send clicks on [data-cta] as events (not tracked before) */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.enp [data-cta],.enp-bar [data-cta]');if(!a)return;var n=a.getAttribute('data-cta');
+if(typeof gtag==='function')gtag('event','cta_click',{cta:n,page:'english'});
+if(typeof fbq==='function'&&/trial/.test(n))fbq('trackCustom','ProbestundeClick',{cta:n});});
+</script>
